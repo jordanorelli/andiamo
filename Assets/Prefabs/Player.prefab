@@ -712,6 +712,7 @@ MonoBehaviour:
   maxMotorTorque: 500
   maxSteeringAngle: 45
   indicator: {fileID: 8769883847925922913}
+  score: 0
 --- !u!65 &3858189780147332992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4878675065672710593
 Transform:
   m_ObjectHideFlags: 0
