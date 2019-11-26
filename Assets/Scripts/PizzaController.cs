@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PizzaController : MonoBehaviour
 {
-    public GameObject destination;
+    public DestinationController destination;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +16,5 @@ public class PizzaController : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
-    }
-
-    public void pickup() {
-        destination.SetActive(true);
-        Destroy(this.gameObject);
     }
 }

@@ -19,7 +19,7 @@ public class PizzeriaController : MonoBehaviour
 
         PizzaController pizza = Instantiate(pizzaPrefab, spawnPoint.transform.position, Quaternion.identity).GetComponent<PizzaController>();
         GameObject obj = destinations[Random.Range(0, destinations.Length)];
-        pizza.destination = obj;
+        pizza.destination = obj.GetComponent<DestinationController>();
         Debug.Log(pizza);
     }
 

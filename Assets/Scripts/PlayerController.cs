@@ -8,14 +8,13 @@ public class PlayerController : MonoBehaviour
     public float maxMotorTorque;
     public float maxSteeringAngle;
     public GameObject indicator;
-    private bool hasPizza;
+    public DestinationController destination;
     public int score;
 
     private PizzeriaController pizzeria;
 
     // Start is called before the first frame update
     void Start() {
-        hasPizza = false;
         score = 0;
         pizzeria = GameObject.FindGameObjectWithTag("Pizzeria").GetComponent<PizzeriaController>();
         pizzeria.MakeAPizza();
@@ -39,26 +38,24 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        indicator.SetActive(hasPizza);
+        indicator.SetActive(destination != null);
     }
 
     public void OnTriggerEnter(Collider other) {
         Debug.Log(other);
         if (other.gameObject.CompareTag("Pizza")) {
-            hasPizza = true;
-            other.GetComponent<PizzaController>().pickup();
+            PizzaController pizza = other.GetComponent<PizzaController>();
+            destination = pizza.destination;
+            destination.gameObject.SetActive(true);
+            Destroy(pizza.gameObject);
             return;
         }
 
-        if (other.gameObject.CompareTag("Destination")) {
-            if (hasPizza) {
-                DestinationController dest = other.GetComponent<DestinationController>();
-                other.gameObject.SetActive(false);
-                hasPizza = false;
-                score++;
-                pizzeria.MakeAPizza();
-                return;
-            }
+        if (other.gameObject == destination.gameObject) {
+            destination = null;
+            other.gameObject.SetActive(false);
+            score++;
+            pizzeria.MakeAPizza();
         }
     }
 
