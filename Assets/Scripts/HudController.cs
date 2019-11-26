@@ -30,11 +30,19 @@ public class HudController : MonoBehaviour
     void Update() {
         scoreText.text = player.score.ToString();
         if (player.destination) {
+            destinationText.text = player.destination.Address;
             destinationBox.SetActive(true);
+            directionsText.text = player.destination.Directions;
             directionsBox.SetActive(true);
         } else {
             destinationBox.SetActive(false);
             directionsBox.SetActive(false);
+        }
+
+        if (player.location != "") {
+            locationText.text = player.location;
+        } else {
+            locationText.text = "(lost)";
         }
     }
 }

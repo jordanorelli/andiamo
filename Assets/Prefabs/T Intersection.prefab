@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 7209300624649069144}
   - component: {fileID: 1977089130014508995}
   - component: {fileID: 1099109948203725326}
+  - component: {fileID: 65821357663402670}
+  - component: {fileID: 114384207052675842}
   m_Layer: 0
   m_Name: T Intersection
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +91,32 @@ CapsuleCollider:
   m_Height: 20
   m_Direction: 1
   m_Center: {x: -10, y: 0, z: -10}
+--- !u!65 &65821357663402670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666524679484032064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10, z: 20}
+  m_Center: {x: 0, y: 5, z: 0}
+--- !u!114 &114384207052675842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666524679484032064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb33c7c4902fb084b9a4312616f1285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Location: 
 --- !u!1001 &1948884478886915818
 PrefabInstance:
   m_ObjectHideFlags: 0

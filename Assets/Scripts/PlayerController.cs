@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float maxSteeringAngle;
     public GameObject indicator;
     public DestinationController destination;
+    public string location;
     public int score;
 
     private PizzeriaController pizzeria;
@@ -51,11 +52,18 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (other.gameObject == destination.gameObject) {
+        if (destination != null && other.gameObject == destination.gameObject) {
             destination = null;
             other.gameObject.SetActive(false);
             score++;
             pizzeria.MakeAPizza();
+        }
+
+        if (other.gameObject.CompareTag("Road")) {
+            RoadController road = other.GetComponent<RoadController>();
+            if (road) {
+                location = road.Location;
+            }
         }
     }
 

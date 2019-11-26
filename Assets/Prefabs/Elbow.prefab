@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6840155025391068082}
   - component: {fileID: 5055085492565969357}
+  - component: {fileID: 5320611298180310865}
+  - component: {fileID: 114186638872438842}
   m_Layer: 0
   m_Name: Elbow
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +48,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 144c3efc4bb2c5244b88790cdb6efa40, type: 3}
+--- !u!65 &5320611298180310865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619608736923509227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10, z: 20}
+  m_Center: {x: 0, y: 5, z: 0}
+--- !u!114 &114186638872438842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619608736923509227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb33c7c4902fb084b9a4312616f1285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Location: 
 --- !u!1001 &5321725234150135665
 PrefabInstance:
   m_ObjectHideFlags: 0

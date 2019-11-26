@@ -5,7 +5,10 @@ using UnityEngine;
 public class DestinationController : MonoBehaviour
 {
     public string Address;
+
+    [TextArea(15,20)]
     public string Directions;
+
     public GameObject visualModel;
 
     private float period;
