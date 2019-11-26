@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
     private bool hasPizza;
     public int score;
 
+    private PizzeriaController pizzeria;
+
     // Start is called before the first frame update
     void Start() {
         hasPizza = false;
         score = 0;
+        pizzeria = GameObject.FindGameObjectWithTag("Pizzeria").GetComponent<PizzeriaController>();
+        pizzeria.MakeAPizza();
     }
 
     void FixedUpdate() {
@@ -42,15 +46,17 @@ public class PlayerController : MonoBehaviour
         Debug.Log(other);
         if (other.gameObject.CompareTag("Pizza")) {
             hasPizza = true;
-            Destroy(other.gameObject);
+            other.GetComponent<PizzaController>().pickup();
             return;
         }
 
         if (other.gameObject.CompareTag("Destination")) {
             if (hasPizza) {
-                Destroy(other.gameObject);
+                DestinationController dest = other.GetComponent<DestinationController>();
+                other.gameObject.SetActive(false);
                 hasPizza = false;
                 score++;
+                pizzeria.MakeAPizza();
                 return;
             }
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4217495058645254511}
   - component: {fileID: 6956701330587504882}
   - component: {fileID: 2954567574914083179}
+  - component: {fileID: 114787737091386174}
   m_Layer: 0
   m_Name: Straight Road
   m_TagString: Untagged
@@ -73,6 +74,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 3, z: 2}
   m_Center: {x: 0, y: 1.5, z: -4}
+--- !u!114 &114787737091386174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352836557107626428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb33c7c4902fb084b9a4312616f1285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4692730903129939174
 PrefabInstance:
   m_ObjectHideFlags: 0
