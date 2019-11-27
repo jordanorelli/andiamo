@@ -13193,6 +13193,7 @@ MonoBehaviour:
   directionsText: {fileID: 1359529512}
   locationBox: {fileID: 629938240}
   locationText: {fileID: 2136364636}
+  player: {fileID: 2136759954}
 --- !u!1001 &1341513866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21894,6 +21895,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6118d3d5a7df7e242a971bb305dfa4a7, type: 3}
+--- !u!114 &2136759954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7551673381258378497, guid: 759748e3437a13243aac6fd8a4709239,
+    type: 3}
+  m_PrefabInstance: {fileID: 151483387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488df3010d756f84d8fb892c320d4573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2142084678
 PrefabInstance:
   m_ObjectHideFlags: 0
