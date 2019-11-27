@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class HudController : MonoBehaviour
 {
 
-    public TextMeshProUGUI scoreText;
+    public Text scoreText;
 
     public GameObject destinationBox;
-    public TextMeshProUGUI destinationText;
+    public Text destinationText;
 
     public GameObject directionsBox;
-    public TextMeshProUGUI directionsText;
+    public Text directionsText;
 
     public GameObject locationBox;
-    public TextMeshProUGUI locationText;
+    public Text locationText;
 
     private PlayerController player;
 
